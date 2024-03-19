@@ -12,6 +12,12 @@ const db = mongoose.connection;
 db.on('error', (error) => console.error(error));
 db.once('open', () => console.log('Connected to MongoDB'));
 
+// Define a simple Mongoose model
+const ExampleModel = mongoose.model('Example', {
+  name: String,
+  description: String
+});
+
 // Define routes
 app.get('/', (req, res) => {
   res.send('Hello World!');
@@ -29,8 +35,7 @@ app.post('/example', async (req, res) => {
     res.status(400).json({ message: error.message });
   }
 });
+
 // Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-
