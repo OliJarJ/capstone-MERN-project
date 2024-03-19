@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
 
-const Shop = mongoose.Schema
+const Schema = mongoose.Schema
 
 //the schema defines the structure of the model
 //create a filter for the pets and products
-const workoutSchema = new Schema({
+const Shop = new Schema({
     title: {
         type: String,
         required: true

@@ -24,4 +24,4 @@ const Adopt = new Schema({
     },
 });
 
-module.exports = mongoose.model('adopt',Adopt);
+module.exports = mongoose.model('adopt', Adopt);
