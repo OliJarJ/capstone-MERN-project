@@ -1,17 +1,13 @@
 // Import required modules
 const express = require('express');
 const mongoose = require('mongoose');
-
 // Create an Express application
 const app = express();
-
 // Set up middleware for parsing JSON
 app.use(express.json());
-
 // Connect to MongoDB using Mongoose
-mongoose.connect('mongodb+srv://abigailjcollins:Kable123@cluster0.c8oywcv.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://abigailjcollins:Kable123@cluster0.c8oywcv.mongodb.net/');
 const db = mongoose.connection;
-
 // Handle MongoDB connection errors
 db.on('error', (error) => console.error(error));
 db.once('open', () => console.log('Connected to MongoDB'));
@@ -26,7 +22,6 @@ const ExampleModel = mongoose.model('Example', {
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
-
 // Example route to handle POST requests
 app.post('/example', async (req, res) => {
   const exampleData = new ExampleModel({
