@@ -1,23 +1,23 @@
 import { useState } from 'react'
-import { useWorkoutsContext } from '../hooks/useWorkoutsContext'
+import { useContactContext } from '../hooks/useContactContext'
 
 const ContactForm = () => {
-  const { dispatch } = useWorkoutsContext()
+  const { dispatch } = useContactContext()
 
-  const [title, setTitle] = useState('')
-  const [load, setLoad] = useState('')
-  const [reps, setReps] = useState('')
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
   const [error, setError] = useState(null)
   const [emptyFields, setEmptyFields] = useState([])
 
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    const workout = {title, load, reps}
+    const Contact = {name, email, message}
     
-    const response = await fetch('/api/workouts', {
+    const response = await fetch('/api/Contact', {
       method: 'POST',
-      body: JSON.stringify(workout),
+      body: JSON.stringify(Contact),
       headers: {
         'Content-Type': 'application/json'
       }
@@ -31,43 +31,43 @@ const ContactForm = () => {
     if (response.ok) {
       setEmptyFields([])
       setError(null)
-      setTitle('')
-      setLoad('')
-      setReps('')
-      dispatch({type: 'CREATE_WORKOUT', payload: json})
+      setName('')
+      setEmail('')
+      setMessage('')
+      dispatch({type: 'CREATE_MESSAGE', payload: json})
     }
 
   }
 
   return (
     <form className="create" onSubmit={handleSubmit}> 
-      <h3>Add a New Workout</h3>
+      <h3>Leave us a Message</h3>
 
-      <label>Excersize Title:</label>
+      <label>Name</label>
       <input 
         type="text" 
-        onChange={(e) => setTitle(e.target.value)} 
-        value={title}
-        className={emptyFields.includes('title') ? 'error' : ''}
+        onChange={(e) => setName(e.target.value)} 
+        value={name}
+        className={emptyFields.includes('name') ? 'error' : ''}
       />
 
-      <label>Load (in kg):</label>
+      <label>Email:</label>
       <input 
-        type="number" 
-        onChange={(e) => setLoad(e.target.value)} 
-        value={load}
-        className={emptyFields.includes('load') ? 'error' : ''}
+        type="text" 
+        onChange={(e) => setEmail(e.target.value)} 
+        value={email}
+        className={emptyFields.includes('email') ? 'error' : ''}
       />
 
-      <label>Number of Reps:</label>
+      <label>Message:</label>
       <input 
-        type="number" 
-        onChange={(e) => setReps(e.target.value)} 
-        value={reps}
-        className={emptyFields.includes('reps') ? 'error' : ''}
+        type="text" 
+        onChange={(e) => setMessage(e.target.value)} 
+        value={message}
+        className={emptyFields.includes('message') ? 'error' : ''}
       />
 
-      <button>Add Workout</button>
+      <button>Submit</button>
       {error && <div className="error">{error}</div>}
     </form>
   )
