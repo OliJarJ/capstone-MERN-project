@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useContactContext } from '../hooks/useContactContext'
+import { useContactContext } from '../Context/useContactContext'
 
 const ContactForm = () => {
   const { dispatch } = useContactContext()

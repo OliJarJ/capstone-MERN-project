@@ -3,13 +3,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config()
 const adoptRoutes = require('./routes/adoptroutes')
-const shopRoutes = require('./routes/shoproutes')
+const shopRoutes = require('./routes/productroutes')
 // Create an Express application
 const app = express();
 // Set up middleware for parsing JSON
 app.use(express.json());
 // Connect to MongoDB using Mongoose
-mongoose.connect('mongodb+srv://abigailjcollins:Kable123@cluster0.c8oywcv.mongodb.net/');
+mongoose.connect('mongodb+srv://Oljarj:CatinpantS@cluster0.c8oywcv.mongodb.net/');
+// mongoose.connect('mongodb+srv://abigailjcollins:Kable123@cluster0.c8oywcv.mongodb.net/');
 const db = mongoose.connection;
 
 // Handle MongoDB connection errors
@@ -20,10 +21,21 @@ app.use('/pets', adoptRoutes)
 
 app.use('/products', shopRoutes)
 
+app.use('contact', Contact)
+
 // Define routes
-// app.get('/', (req, res) => {
-//   res.send('Hello World!');
-// });
+app.get('/pets', (req, res, next) => {
+  res.send('Welcome to the adoption center!');
+});
+
+app.get('/products', (req, res, next) => {
+  res.send('Welcome to the pet shop!');
+});
+
+app.get('/Contact', (req, res, next) => {
+  res.send('Leave us a message!');
+});
+
 
 // Example route to handle POST requests
 // app.post('/example', async (req, res) => {

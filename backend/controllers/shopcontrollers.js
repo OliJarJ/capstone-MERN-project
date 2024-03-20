@@ -1,4 +1,4 @@
-const Pets = require('../models.js/adopt')
+const Pets = require('../models/adopt')
 
 //get all pets
 const getPets = async (req, res) => {
