@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 
 //the schema defines the structure of the model
 //create a filter for the pets and products
-const Shop = new Schema({
+const Products = new Schema({
     title: {
         type: String,
         required: true
@@ -28,5 +28,5 @@ const Shop = new Schema({
 
 });
 
-module.exports = mongoose.model('shop', Shop)
+module.exports = mongoose.model('products', Products)
 

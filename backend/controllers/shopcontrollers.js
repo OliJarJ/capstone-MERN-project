@@ -1,3 +1,5 @@
+const Pets = require('../models.js/adopt')
+
 //get all pets
 const getPets = async (req, res) => {
     const pets = await Pets.find({}).sort({createdAt: -1}) //so that newest pets are at the top
@@ -11,7 +13,7 @@ const createPet = async (req, res) =>{
 
     // add doc to db
     try{
-        const pet = await pet.create({title, description, category, price, date_added})
+        const pet = await Pets.create({title, description, category, price, date_added})
         res.status(200).json(pet)
     } catch(error){
         res.status(400).json({error: error.message})
