@@ -8,10 +8,11 @@ import Contact from './pages/ContactForm';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import Shop from './pages/Shop';
-// import ContactForm from './pages/ContactForm';
+import Footer from './components/Footer';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default class App extends Component {
+
   render() {
     return (
       <BrowserRouter>
@@ -25,7 +26,7 @@ export default class App extends Component {
             <Route path='/shop' element={<Shop />} />
           </Routes>
         </div>
-       
+       <Footer />
       </BrowserRouter>
     );
   }

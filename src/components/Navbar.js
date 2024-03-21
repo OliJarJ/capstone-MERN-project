@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <header>
-      <div className="container">
+      <div className="container-fluid" style={{backgroundColor: '#360568ff', display: 'flex',  }}>
         <Link to="/home">
           <h1>Home</h1>
         </Link>
@@ -23,9 +23,7 @@ const Navbar = () => {
         <Link to="/contact">
           <h1>Contact</h1>
         </Link>
-        {/* <Link to="/">
-          <h1>Register</h1>
-        </Link> */}
+       
       </div>
     </header>
   )
