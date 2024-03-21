@@ -7,7 +7,7 @@ const Home = () => {
   const [homeContent, setHomeContent] = useState(null);
 
   useEffect(() => {
-    axios.get('/api/home')
+    axios.get('/home')
       .then(res => {
         setHomeContent(res.data);
       })

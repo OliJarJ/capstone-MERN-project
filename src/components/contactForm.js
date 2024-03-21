@@ -1,9 +1,10 @@
+// components/ContactForm.js
 import { useState } from 'react'
-import { useContactContext } from '../Context/useContactContext'
+import React from 'react'
+
 
 const ContactForm = () => {
-  const { dispatch } = useContactContext()
-
+  const { dispatch } = contact()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
@@ -15,7 +16,7 @@ const ContactForm = () => {
 
     const Contact = {name, email, message}
     
-    const response = await fetch('/api/Contact', {
+    const response = await fetch('/Contact', {
       method: 'POST',
       body: JSON.stringify(Contact),
       headers: {
@@ -73,4 +74,4 @@ const ContactForm = () => {
   )
 }
 
-export default ContactForm
+export default ContactForm;

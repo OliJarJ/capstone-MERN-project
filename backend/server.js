@@ -6,8 +6,7 @@ const cors = require('cors');
 const adoptRoutes = require('./routes/adoptroutes')
 const productRoutes = require('./routes/productroutes')
 const contactRoute = require('./routes/contactroute')
-// const Home = require('./routes/homeroutes')
-// const aboutUs = require('./routes/aboutroutes')
+
 
 // Create an Express application
 const app = express();
@@ -15,11 +14,18 @@ const app = express();
 // Set up middleware for parsing JSON
 app.use(express.json());
 app.use(cors());
+// app.use(bodyParser.json());
 // Connect to MongoDB using Mongoose
 mongoose.connect('mongodb+srv://Oljarj:CatinpantS@cluster0.c8oywcv.mongodb.net/');
-// mongoose.connect('mongodb+srv://abigailjcollins:Kable123@cluster0.c8oywcv.mongodb.net/');
+
 const db = mongoose.connection;
 
+//connecting Contact.js
+const dbURI = 'mongodb+srv://Oljarj:CatinpantS@cluster0.c8oywcv.mongodb.net/';
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => app.listen(5000, () => console.log('Server running')))
+  .catch(err => console.error(err));
+  
 // Handle MongoDB connection errors
 db.on('error', (error) => console.error(error));
 db.once('open', () => console.log('Connected to MongoDB'));
@@ -36,7 +42,7 @@ app.get('/pets', (req, res, next) => {
 });
 
 app.get('/products', (req, res, next) => {
-  res.send('Welcome to the pet shop!');
+  res.send('Welcome to the pet supplies shop!');
 });
 
 app.get('/Contact', (req, res, next) => {
