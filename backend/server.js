@@ -2,6 +2,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config()
+const cors = require('cors');
 const adoptRoutes = require('./routes/adoptroutes')
 const productRoutes = require('./routes/productroutes')
 const contactRoute = require('./routes/contactroute')
@@ -11,7 +12,7 @@ const app = express();
 
 // Set up middleware for parsing JSON
 app.use(express.json());
-
+app.use(cors());
 // Connect to MongoDB using Mongoose
 mongoose.connect('mongodb+srv://Oljarj:CatinpantS@cluster0.c8oywcv.mongodb.net/');
 // mongoose.connect('mongodb+srv://abigailjcollins:Kable123@cluster0.c8oywcv.mongodb.net/');

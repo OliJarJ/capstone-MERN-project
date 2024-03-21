@@ -1,31 +1,27 @@
-import React from 'react';
-import { BrowserRouter } from "react-router-dom";
-import { Routes, Route, Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import AboutUs from './pages/AboutUs';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import Products from './pages/Products';
+import Shop from './pages/Shop';
 
-
-
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-      
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div className='App'>
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/about' element={<AboutUs />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/products' element={<Products />} />
+            <Route path='/shop' element={<Shop />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
+    );
+  }
 }
-
-export default App;
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

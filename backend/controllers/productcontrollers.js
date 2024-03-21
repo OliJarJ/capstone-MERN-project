@@ -2,7 +2,7 @@ const Products = require('../models/products')
 
 //get all products
 const getProducts = async (req, res) => {
-    const pets = await Products.find({}).sort({createdAt: -1}) //so that newest pets are at the top
+    const products = await Products.find({}).sort({createdAt: -1}) //so that newest pets are at the top
     res.status(200).json(products)
 }
 
