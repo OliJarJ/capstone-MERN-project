@@ -3,11 +3,15 @@ const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config()
 const adoptRoutes = require('./routes/adoptroutes')
-const shopRoutes = require('./routes/productroutes')
+const productRoutes = require('./routes/productroutes')
+const contactRoute = require('./routes/contactroute')
+
 // Create an Express application
 const app = express();
+
 // Set up middleware for parsing JSON
 app.use(express.json());
+
 // Connect to MongoDB using Mongoose
 mongoose.connect('mongodb+srv://Oljarj:CatinpantS@cluster0.c8oywcv.mongodb.net/');
 // mongoose.connect('mongodb+srv://abigailjcollins:Kable123@cluster0.c8oywcv.mongodb.net/');
@@ -19,9 +23,9 @@ db.once('open', () => console.log('Connected to MongoDB'));
 
 app.use('/pets', adoptRoutes)
 
-app.use('/products', shopRoutes)
+app.use('/products', productRoutes)
 
-app.use('contact', Contact)
+app.use('/contact', contactRoute)
 
 // Define routes
 app.get('/pets', (req, res, next) => {

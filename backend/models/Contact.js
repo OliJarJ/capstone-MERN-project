@@ -1,14 +1,24 @@
-
-
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-Contact = mongoose.Contact({
-    name: {type: String},
-    email: {type: String},
-    message: {type: String}
+const Contact = new Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+        required: true
+    },
+    message:{
+        type: String,
+        required: true
+    },
+    // date_added: {
+    //     type: Date,
+    //     default: Date.now
+    // },
 });
 
-const Contact = mongoose.model('contact', Contact);
-
-module.exports = router;
+module.exports = mongoose.model('contact', Contact);
 
