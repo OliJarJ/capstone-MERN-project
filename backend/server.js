@@ -6,6 +6,7 @@ const cors = require('cors');
 const adoptRoutes = require('./routes/adoptroutes')
 const productRoutes = require('./routes/productroutes')
 const contactRoute = require('./routes/contactroute')
+// const Home = require('.')
 
 // Create an Express application
 const app = express();

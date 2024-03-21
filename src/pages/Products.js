@@ -27,17 +27,17 @@ const ProductPage = () => {
   return (
     <div>
       <h1>Products</h1>
-      <ul>
+      <div>
         {products.map(product => (
-          <li key={product._id}>
+          <div key={product._id}>
             <h2>{product.title}</h2>
             <p>{product.description}</p>
             <p>Category: {product.category}</p>
             <p>Price: {product.price}</p>
             <p>Date Added: {new Date(product.date_added).toLocaleDateString()}</p>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

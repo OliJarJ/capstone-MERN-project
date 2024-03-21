@@ -8,24 +8,24 @@ const Navbar = () => {
   return (
     <header>
       <div className="container">
-        <Link to="/">
+        <Link to="/home">
           <h1>Home</h1>
         </Link>
-        <Link to="/">
+        <Link to="/aboutus">
           <h1>About Us</h1>
         </Link>
-        <Link to="/">
+        <Link to="/shop">
           <h1>Animal Adoption</h1>
         </Link>
         <Link to="/products">
           <h1>Shop</h1>
         </Link>
-        <Link to="/">
+        <Link to="/contact">
           <h1>Contact</h1>
         </Link>
-        <Link to="/">
+        {/* <Link to="/">
           <h1>Register</h1>
-        </Link>
+        </Link> */}
       </div>
     </header>
   )
