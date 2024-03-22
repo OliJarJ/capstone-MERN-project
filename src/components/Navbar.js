@@ -3,6 +3,7 @@ import { FaCat } from "react-icons/fa6";
 import '../App.css'
 
 
+
 const Navbar = () => {
 
   return (
