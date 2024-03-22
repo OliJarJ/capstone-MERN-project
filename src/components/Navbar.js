@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faOtter } from '@fortawesome/free-solid-svg-icons'
 import '../App.css'
 
 
@@ -11,7 +12,7 @@ const Navbar = () => {
       <div className="container-fluid" style={{backgroundColor: '#360568ff', display: 'flex', position:'sticky',}}>
       <div>
    {/*Insert LOGO here*/}
-     
+   <FontAwesomeIcon icon={faOtter} />
       <h3 className="text-info" style={{fontFamily:'Goudy Old Style'}}>O & A Pet Destination</h3>
       </div>
         <Link to="/">

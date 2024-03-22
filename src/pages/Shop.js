@@ -19,12 +19,12 @@ const ShopPage = () => {
         console.error('Error fetching products:', error);
       }
     };
-
+  
     fetchProducts();
-
+  
     // Cleanup function
     return () => {
-      // Cleanup code if needed
+
     };
   }, []); // Empty dependency array means this effect runs only once when the component mounts
 
@@ -37,13 +37,14 @@ const ShopPage = () => {
             <h2>{shop.title}</h2>
             <p>{shop.description}</p>
             <p>Category: {shop.category}</p>
-            <p>Price: {shop.price}</p>
+            <p>Price: ${shop.price}</p>
             <p>Date Added: {new Date(shop.date_added).toLocaleDateString()}</p>
           </div>
         ))}
       </div>
-    </div>
+
+      </div>
   );
-};
+  };
 
 export default ShopPage;
