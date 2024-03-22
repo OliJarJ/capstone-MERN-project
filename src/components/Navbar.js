@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FaCat } from "react-icons/fa6";
+import '../App.css'
 
 
 const Navbar = () => {

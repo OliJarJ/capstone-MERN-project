@@ -1,6 +1,7 @@
 // components/Footer.js
 
 import { Link } from 'react-router-dom';
+import '../App.css';
 
 
 const Footer = () => {
