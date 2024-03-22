@@ -25,6 +25,9 @@ export default class App extends Component {
             <Route path='/products' element={<Products />} />
             <Route path='/shop' element={<Shop />} />
           </Routes>
+
+
+
         </div>
        <Footer />
       </BrowserRouter>
