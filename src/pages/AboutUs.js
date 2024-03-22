@@ -1,46 +1,37 @@
-// pages/AboutUs
+// pages/AboutUs.js
 
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Container, Card, CardContent } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const AboutUs = () => {
-  const [posts, setPosts] = useState([]);
-  
+  const [aboutContent, setAboutContent] = useState('');
+
   useEffect(() => {
-    axios.get('https://localhost:4000/AboutUs')
+    axios.get('localhost:4000/aboutus')
       .then(res => {
-        setPosts(res.data);
+        setAboutContent(res.data.content);
       })
       .catch(error => {
-        console.error('Error fetching posts:', error);
-        setPosts([]);
+        console.error('Error fetching about content:', error);
+        setAboutContent('');
       });
   }, []);
 
-  const postList = posts.length ? (
-    posts.map(post => (
-      <div className="post card" key={post.id}>
-        <div className="card-content">
-          <Link to={`/posts/${post.id}`}>
-            <span className="card-title">{post.title}</span>
-          </Link>
-          <p>{post.body}</p>
-        </div>
-      </div>
-    ))
-  ) : (
-    <div className="center">No posts to show</div>
-  );
-
   return (
-    <div className='container'>
-      <div className="post">
-        <h4 className="center">About Us</h4>
-        {postList}
-      </div>
-    </div>
+    <Container>
+      <Card>
+        <Card.Header>
+          <h4 className="text-center">About Us</h4>
+        </Card.Header>
+        <Card.Body>
+          <Card.Text>{aboutContent}</Card.Text>
+          
+          <Link to="/contact" className="btn btn-primary">Contact Us</Link>
+        </Card.Body>
+      </Card>
+    </Container>
   );
 };
 
