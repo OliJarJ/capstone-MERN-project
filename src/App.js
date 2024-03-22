@@ -19,7 +19,7 @@ export default class App extends Component {
         <div className='App'>
           <Navbar />
           <Routes>
-            <Route path='/home' element={<Home />} />
+            <Route path='/' element={<Home />} />
             <Route path='/aboutUs' element={<AboutUs />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/products' element={<Products />} />
