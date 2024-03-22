@@ -30,15 +30,15 @@ const AboutUs = () => {
         </Card.Header>
         <Card.Body>
           <Card.Text>
-          <img src={parrot} alt="A colorful parrot" />
+          <img className="img-fluid flex" src={parrot} alt="A colorful parrot" />
           At O & A Pet Destination, we are more than just a pet store - we're a sanctuary for pets and their devoted owners alike. Nestled in the heart of our community, our passion for animals drives everything we do. From the moment you step through our doors, you'll experience a warm and welcoming atmosphere where your furry, feathery, or scaly companions are celebrated as cherished family members. Whether you're seeking premium pet products, expert advice, or simply a friendly chat about your pet's wellbeing, our knowledgeable team is here to assist you every step of the way.
           <br />
 
 What sets O & A Pet Destination apart is our unwavering commitment to providing the highest quality care for your beloved pets. We understand the unique needs of each animal and take pride in offering a diverse range of products that cater to their individual requirements. Whether you're in search of nutritious pet food, durable toys, stylish accessories, or essential grooming supplies, you'll find everything you need under our roof. Our carefully curated selection ensures that your pets receive the best possible care, allowing them to thrive and live their happiest, healthiest lives by your side.
 <br />
-<img src={corgi} alt="An adorable corgi" />
+<img className="img-fluid flex" src={corgi} alt="An adorable corgi" />
 
-<img src={kitten} alt="A sweet tabby kitten" />
+<img className="img-fluid flex" src={kitten} alt="A sweet tabby kitten" />
 At O & A Pet Destination, we believe in giving back to the community that has supported us throughout the years. That's why we actively participate in local initiatives and charity events aimed at improving the welfare of animals in need. From sponsoring adoption drives to organizing educational workshops, we are dedicated to making a positive impact on the lives of both pets and people. When you choose to shop with us, you're not just supporting a business - you're joining a compassionate community that values the wellbeing of all creatures great and small. Welcome to O & A Pet Destination, where every pet is treated like family.</Card.Text>
 
           <Link to="/contact" className="btn btn-primary">Contact Us</Link>
