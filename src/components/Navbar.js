@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-
 import { FaCat } from "react-icons/fa6";
+
 
 const Navbar = () => {
 
@@ -9,6 +9,7 @@ const Navbar = () => {
       <div className="container-fluid" style={{backgroundColor: '#360568ff', display: 'flex', position:'sticky',}}>
       <div>
       <FaCat className="text-info" style={{fontSize:'large'}}/>
+      <h3 className="text-info" style={{fontFamily:'Goudy Old Style'}}>O & A Pet Destination</h3>
       </div>
         <Link to="/home">
           <h1 className="text-white mx-4 my-4" style={{fontSize: 'medium'}}>Home</h1>
