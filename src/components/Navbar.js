@@ -6,7 +6,7 @@ import '../App.css'
 const Navbar = () => {
 
   return (
-    <header>
+    <nav>
       <div className="container-fluid" style={{backgroundColor: '#360568ff', display: 'flex', position:'sticky',}}>
       <div>
       <FaCat className="text-info" style={{fontSize:'large'}}/>
@@ -29,7 +29,7 @@ const Navbar = () => {
         </Link>
        
       </div>
-    </header>
+    </nav>
   )
 }
 export default Navbar
