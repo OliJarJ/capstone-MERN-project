@@ -1,73 +1,84 @@
-// pages/ContactForm.js
+import React, { useState } from 'react';
+import axios from 'axios';
+import couplewithdog from '../imgs/couple-with-dog.jpg'
 
-import React, { useState } from 'react'; // Importing necessary modules
-import axios from 'axios'; // Importing Axios for making HTTP requests
+const ContactForm = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState(null);
 
-const ContactForm = () => { // Define ContactForm component
-  const [name, setName] = useState(''); // State for storing name input value
-  const [email, setEmail] = useState(''); // State for storing email input value
-  const [message, setMessage] = useState(''); // State for storing message textarea value
-  const [error, setError] = useState(null); // State for storing error message from server
-  // const [emptyFields, setEmptyFields] = useState(null); // State for storing names of empty fields reported by server
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  const handleSubmit = async (e) => { // Function to handle form submission
-    e.preventDefault(); // Prevent default form submission behavior
-
-    const contactData = { name, email, message }; // Create object with form data
+    const contactData = { name, email, message };
 
     try {
-      const response = await axios.post('http://localhost:4000/contact', contactData); // Send POST request to server with form data
-      console.log(response.data); // Log response from server to console
+      const response = await axios.post('http://localhost:4000/contact', contactData);
+      console.log(response.data);
 
-      // Reset form fields and state after successful submission
       setName('');
       setEmail('');
       setMessage('');
       setError(null);
-      // setEmptyFields([]);
-    } catch (error) { // Catch any errors that occur during form submission
-      console.error('Error submitting message:', error); // Log error to console
-      if (error.response) { // If server responds with error
-        setError(error.response.data.error); // Set error message from server response
-        // setEmptyFields(error.response.data.emptyFields); // Set emptyFields reported by server
-      } else { // If error originates from client or network
-        setError('An error occurred. Please try again later.'); // Set generic error message
-        // setEmptyFields([]); // Clear emptyFields state
+    } catch (error) {
+      console.error('Error submitting message:', error);
+      if (error.response) {
+        setError(error.response.data.error);
+      } else {
+        setError('An error occurred. Please try again later.');
       }
     }
   };
 
   return (
-    <form className="create" onSubmit={handleSubmit}>{ /*/ Render form with onSubmit event handler*/}
-      <h3 className="text-info">Leave us a message!</h3> {/*// Heading indicating purpose of form*/}
+   
+    <div>
+     <div>
+  <img className="img-fluid" src={couplewithdog} alt="A couple and their pet dog" />
+</div>
+      <form className="create" onSubmit={handleSubmit}>
+        <h3 className="text-center my-4 text-secondary display-6">Leave us a message!</h3>
 
-      <label>Name</label> {/* // Label for name input field}*/}
-      <input
-        type="text"
-        value={name} // Value bound to name state
-        onChange={(e) => setName(e.target.value)} // Update name state on input change
-        required // Required field
-      />
+        <label>Name</label>
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+        />
 
-      <label>Email:</label>
-      <input
-        type="email"
-        value={email} // Value bound to email state
-        onChange={(e) => setEmail(e.target.value)} // Update email state on input change
-        required // Required field
-      />
+        <label>Email:</label>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
 
-      <label>Message:</label> 
-      <textarea
-        value={message} // Value bound to message state
-        onChange={(e) => setMessage(e.target.value)} // Update message state on input change
-        required // Required field
-      ></textarea>
+        <label>Message:</label>
+        <textarea
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          required
+        ></textarea>
 
-      <button type="submit">Submit</button> 
-      {error && <div className="error">{error}</div>}
-    </form>
+        <button type="submit">Submit</button>
+        {error && <div className="error">{error}</div>}
+      </form>
+      <div className="container">
+      <div className=" my-5 mx-2 py-5 py-5 justify-content-center">
+        <h3 className="mx-2">Follow us on Social Media:</h3>
+        <ul style={{listStyle:'none'}}>
+          <li className="social-media-card mx-2"><a href="https://example.com/facebook" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li className="social-media-card mx-2"><a href="https://example.com/twitter" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+          <li className="social-media-card mx-2"><a href="https://example.com/instagram" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          {/* Add more social media links as needed */}
+        </ul>
+      </div>
+      </div>
+    </div>
   );
 };
 
-export default ContactForm; // Export ContactForm component
+export default ContactForm;
