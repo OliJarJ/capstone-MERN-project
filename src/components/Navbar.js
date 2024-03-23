@@ -8,12 +8,15 @@ import '../App.css'
 const Navbar = () => {
 
   return (
-    <nav>
-      <div className="container-fluid" style={{backgroundColor: '#360568ff', display: 'flex', position:'sticky',}}>
-      <div>
+    <nav id="navbar" className="container-fluid" style={{backgroundColor: '#360568ff', display: 'flex', position:'sticky',}}>
+      {/* <div className="container-fluid" style={{backgroundColor: '#360568ff', display: 'flex', position:'sticky',}}> */}
+      <div className="row">
    {/*Insert LOGO here*/}
-   <FontAwesomeIcon icon={faOtter} />
-      <h3 className="text-info" style={{fontFamily:'Goudy Old Style'}}>O & A Pet Destination</h3>
+   <div className="brand d-flex" style={{marginTop:''}}>
+   <FontAwesomeIcon icon={faOtter} className="text-info my-2 mx-2" style={{fontSize:'x-large',}} />
+   
+      <h3 className="text-info d-flex mx-2 fw-bold" style={{fontFamily:'Goudy Old Style', marginTop:'1vh'}}>O & A Pet Destination</h3>
+      </div>
       </div>
         <Link to="/">
           <h1 className="text-white mx-4 my-4" style={{fontSize: 'medium'}}>Home</h1>
@@ -31,7 +34,7 @@ const Navbar = () => {
           <h1 className="text-white mx-4 my-4" style={{fontSize: 'medium'}}>Contact</h1>
         </Link>
        
-      </div>
+      {/* </div> */}
     </nav>
   )
 }

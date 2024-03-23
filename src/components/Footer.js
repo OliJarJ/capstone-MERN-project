@@ -8,18 +8,18 @@ const Footer = () => {
 
   return (
 <footer>
-      <div className="container-fluid" style={{backgroundColor:'#360568ff', display:'flex', bottom:'0', position: 'fixed', }}>
+      <div className="container-fluid" style={{backgroundColor:'#360568ff', display:'flex', bottom:'0', position: 'fixed',}}>
         <Link to="/">
-          <h1>Careers</h1>
+          <h1 className="text-info mx-3" style={{fontSize: 'medium'}}>Careers</h1>
         </Link>
         <Link to="/">
-          <h1>Vet Locations</h1>
+          <h1 className="text-info mx-3" style={{fontSize: 'medium'}}>Vet Locations</h1>
         </Link>
         <Link to="/">
-          <h1>Resources</h1>
+          <h1 className="text-info mx-3" style={{fontSize: 'medium'}}>Resources</h1>
         </Link>
         <Link to="/">
-          <h1>FAQs</h1>
+          <h1 className="text-info mx-3" style={{fontSize: 'medium'}}>FAQs</h1>
         </Link>
       </div>
     </footer>

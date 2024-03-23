@@ -48,3 +48,26 @@ font-size: small;
 }
 
 
+/*Nav*/
+#navbar {
+    background-color: #333; /* Black background color */
+    position: fixed; /* Make it stick/fixed */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  }
+  
+  /* Style the navbar links */
+  #navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+  }
+  
+  #navbar a:hover {
+    background-color: rgba(196, 155, 187, .12);
+    color: rgb(255, 255, 255);
+  }
+
