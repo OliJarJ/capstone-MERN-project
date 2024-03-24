@@ -35,7 +35,6 @@ $nyanza: rgba(212, 244, 221, 1); */
 body {
     height: 100vh;
     width: 100%;
-    display:flex;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -48,3 +47,154 @@ font-size: small;
 }
 
 
+/*Nav*/
+#navbar {
+    background-color: #333; /* Black background color */
+    position: fixed; /* Make it stick/fixed */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  }
+  
+  /* Style the navbar links */
+  #navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+  }
+  
+  #navbar a:hover {
+    background-color: rgba(196, 155, 187, .12);
+    color: rgb(255, 255, 255);
+  }
+
+/*Socials on Contact Page*/
+.social-media-card {
+  background-color: #fff; /* Card background color */
+  border-radius: 8px; /* Card border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
+  padding: 20px; /* Padding inside the card */
+  transition: transform 0.3s ease; /* Transition for hover effect */
+  
+}
+
+.social-media-card:hover {
+  transform: scale(1.02); /* Zoom effect on hover */
+}
+
+.social-media-card ul {
+  list-style: none; /* Remove default list styles */
+  padding: 3rem; /* Remove default padding */
+}
+
+.social-media-card ul li {
+  margin-bottom: 10rem; /* Spacing between social media links */
+}
+
+.social-media-card ul li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Link color */
+}
+
+.social-media-card ul li a:hover {
+  color: #007bff; /* Link color on hover */
+}
+
+
+/*Nav animation*/
+.menu-toggle {
+  display: none;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu-items.show {
+  animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .brand h3 {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-items {
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #360568ff;
+    width: 100%;
+    z-index: 999;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+}
+
+/*Button*/
+/*button animation*/
+.portfolio-button {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.portfolio-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.portfolio-button:hover::before {
+  width: 0;
+  height: 0;
+}
+
+.portfolio-button:hover {
+  color: #007bff;
+}
+
+.portfolio-button span {
+  position: relative;
+  z-index: 1;
+}
