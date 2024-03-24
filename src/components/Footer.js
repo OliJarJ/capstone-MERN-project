@@ -7,21 +7,22 @@ import '../App.css';
 const Footer = () => {
 
   return (
-<footer>
-      <div className="container-fluid" style={{backgroundColor:'#360568ff', display:'flex', bottom:'0', position: 'fixed',}}>
+<footer className="footer" style={{marginTop:'3rem'}}>
+      <div className="container-fluid" style={{backgroundColor:'#360568ff', display:'flex', marginBottom:'0', justifyContent:'center', position: 'absolute'}}>
         <Link to="/">
-          <h1 className="text-info mx-3" style={{fontSize: 'medium'}}>Careers</h1>
+          <h1 className="text-white mx-3" style={{fontSize: 'medium', paddingTop: '2rem', paddingBottom:'2rem'}}>Careers</h1>
         </Link>
         <Link to="/">
-          <h1 className="text-info mx-3" style={{fontSize: 'medium'}}>Vet Locations</h1>
+          <h1 className="text-white mx-3" style={{fontSize: 'medium', paddingTop: '2rem', paddingBottom:'2rem'}}>Vet Locations</h1>
         </Link>
         <Link to="/">
-          <h1 className="text-info mx-3" style={{fontSize: 'medium'}}>Resources</h1>
+          <h1 className="text-white mx-3" style={{fontSize: 'medium', paddingTop: '2rem', paddingBottom:'2rem'}}>Resources</h1>
         </Link>
         <Link to="/">
-          <h1 className="text-info mx-3" style={{fontSize: 'medium'}}>FAQs</h1>
+          <h1 className="text-white mx-3" style={{fontSize: 'medium', paddingTop: '2rem', paddingBottom:'2rem'}}>FAQs</h1>
         </Link>
       </div>
+      
     </footer>
   )
 }

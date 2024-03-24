@@ -116,7 +116,7 @@ font-size: small;
 }
 
 .menu-items.show {
-  animation: slideDown 0.3s ease;
+  animation: slideDown 0.5s ease;
 }
 
 @keyframes slideDown {
@@ -152,4 +152,49 @@ font-size: small;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: none;
   }
+}
+
+/*Button*/
+/*button animation*/
+.portfolio-button {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.portfolio-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.portfolio-button:hover::before {
+  width: 0;
+  height: 0;
+}
+
+.portfolio-button:hover {
+  color: #007bff;
+}
+
+.portfolio-button span {
+  position: relative;
+  z-index: 1;
 }
