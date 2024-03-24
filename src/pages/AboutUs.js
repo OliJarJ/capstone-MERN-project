@@ -26,8 +26,9 @@ const AboutUs = () => {
     <Container>
       
           <h4 className="text-center">About Us</h4>
-        
-          <img className="img-fluid flex col-6" src={parrot} alt="A colorful parrot" />
+          <div className="row">
+         
+          <img className="img-fluid  col-6" src={parrot} alt="A colorful parrot" />
           <div className="col-6 ">
       <p className="text-dark text-center">
           At O & A Pet Destination, we are more than just a pet store - we're a sanctuary for pets and their devoted owners alike. Nestled in the heart of our community, our passion for animals drives everything we do. From the moment you step through our doors, you'll experience a warm and welcoming atmosphere where your furry, feathery, or scaly companions are celebrated as cherished family members. Whether you're seeking premium pet products, expert advice, or simply a friendly chat about your pet's wellbeing, our knowledgeable team is here to assist you every step of the way.</p>
@@ -44,6 +45,7 @@ What sets O & A Pet Destination apart is our unwavering commitment to providing 
 <div className="col-6 ">
       <p className="text-dark text-center">
 At O & A Pet Destination, we believe in giving back to the community that has supported us throughout the years. That's why we actively participate in local initiatives and charity events aimed at improving the welfare of animals in need. From sponsoring adoption drives to organizing educational workshops, we are dedicated to making a positive impact on the lives of both pets and people. When you choose to shop with us, you're not just supporting a business - you're joining a compassionate community that values the wellbeing of all creatures great and small. Welcome to O & A Pet Destination, where every pet is treated like family.</p>
+</div>
 </div>
           <Link to="/contact" className="btn btn-primary">Contact Us</Link>
        
