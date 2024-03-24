@@ -7,7 +7,7 @@ import AboutUs from './pages/AboutUs';
 import Contact from './pages/ContactForm';
 import Home from './pages/Home';
 import Products from './pages/Products';
-import Shop from './pages/Shop';
+import Pets from './pages/Pets';
 import Footer from './components/Footer';
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -23,7 +23,7 @@ export default class App extends Component {
             <Route path='/aboutUs' element={<AboutUs />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/products' element={<Products />} />
-            <Route path='/shop' element={<Shop />} />
+            <Route path='/pets' element={<Pets />} />
           </Routes>
 
 

@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faOtter, faBars, faTimes } from '@fortawesome/free-solid-svg-icons'; // Adjusted imports to align with body content
+import { faOtter, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import '../index.css';
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
-
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,68 +26,35 @@ const Navbar = () => {
   };
 
   return (
-
-    <nav id="navbar" className="container-fluid" style={{ backgroundColor: '#360568ff', display: 'flex', position: 'sticky', top: 0, zIndex: 1000 }}>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"><i class="bi bi-list"></i></span>
-
-                </button>
-      <div className="row">
-        <div className="brand d-flex" style={{ marginTop: '' }}>
-          <FontAwesomeIcon icon={faOtter} className="text-white my-2 mx-2" style={{ fontSize: 'xx-large' }} />
-          <h3 className="text-white d-flex mx-2 fw-bold" style={{ fontFamily: 'Goudy Old Style', marginTop: '1vh',  }}>O & A Pet Destination</h3>
+    <nav className="container-fluid navbar navbar-expand-lg navbar-light" style={{ backgroundColor: '#360568ff' }}>
+      <div className="container">
+        <Link to="/" className="navbar-brand">
+          <FontAwesomeIcon icon={faOtter} className="text-white" style={{ fontSize: '2rem' }} />
+          <span className="text-white fw-bold ms-2">O & A Pet Destination</span>
+        </Link>
+        <button className="navbar-toggler" type="button" onClick={toggleMenu} aria-label="Toggle navigation">
+          <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} className="text-white" style={{ fontSize: '1.5rem' }} />
+        </button>
+        <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`}>
+          <ul className="navbar-nav ms-auto">
+            <NavItem to="/" text="Home" closeMenu={() => setIsMenuOpen(false)} />
+            <NavItem to="/aboutus" text="About Us" closeMenu={() => setIsMenuOpen(false)} />
+            <NavItem to="/shop" text="Animal Adoption" closeMenu={() => setIsMenuOpen(false)} />
+            <NavItem to="/products" text="Shop" closeMenu={() => setIsMenuOpen(false)} />
+            <NavItem to="/contact" text="Contact" closeMenu={() => setIsMenuOpen(false)} />
+          </ul>
         </div>
-        {isLargeScreen ? ( // Display navlinks on larger screens
-          <div className="navlinks">
-            <Link to="/">
-              <h1 className="text-white mx-4 my-4" style={{ fontSize: 'medium' }}>Home</h1>
-            </Link>
-            <Link to="/aboutus">
-              <h1 className="text-white mx-4 my-4" style={{ fontSize: 'medium' }}>About Us</h1>
-            </Link>
-            <Link to="/shop">
-              <h1 className="text-white mx-4 my-4" style={{ fontSize: 'medium' }}>Adoption</h1>
-            </Link>
-            <Link to="/products">
-              <h1 className="text-white mx-4 my-4" style={{ fontSize: 'medium' }}>Shop</h1>
-            </Link>
-            <Link to="/contact">
-              <h1 className="text-white mx-4 my-4" style={{ fontSize: 'medium' }}>Contact</h1>
-            </Link>
-          </div>
-        ) : (
-
-
-          // Display menu toggle icon on smaller screens
-          <div className="menu-toggle" onClick={toggleMenu}>
-            <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} className="text-white my-4 mx-2" style={{ fontSize: 'large', cursor: 'pointer' }} />
-          </div>
-        )}
       </div>
-
-    
-      {!isLargeScreen && (
-        <div className={`menu-items ${isMenuOpen ? 'show' : ''}`}>
-          <Link to="/" onClick={() => setIsMenuOpen(false)}>
-            <h1 className="text-black mx-4 my-4" style={{ fontSize: 'medium' }}>Home</h1>
-          </Link>
-          <Link to="/aboutus" onClick={() => setIsMenuOpen(false)}>
-            <h1 className="text-black mx-4 my-4" style={{ fontSize: 'medium' }}>About Us</h1>
-          </Link>
-          <Link to="/shop" onClick={() => setIsMenuOpen(false)}>
-            <h1 className="text-black mx-4 my-4" style={{ fontSize: 'medium' }}>Animal Adoption</h1>
-          </Link>
-          <Link to="/products" onClick={() => setIsMenuOpen(false)}>
-            <h1 className="text-black mx-4 my-4" style={{ fontSize: 'medium' }}>Shop</h1>
-          </Link>
-          <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-            <h1 className="text-black mx-4 my-4" style={{ fontSize: 'medium' }}>Contact</h1>
-          </Link>
-        </div>
-      )}
     </nav>
-  )
-}
+  );
+};
+
+const NavItem = ({ to, text, closeMenu }) => {
+  return (
+    <li className="nav-item">
+      <Link to={to} className="nav-link text-white" onClick={closeMenu}>{text}</Link>
+    </li>
+  );
+};
 
 export default Navbar;
