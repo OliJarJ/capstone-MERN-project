@@ -43,8 +43,9 @@ const Navbar = () => {
             <NavItem to="/products" text="Shop" closeMenu={() => setIsMenuOpen(false)} />
             <NavItem to="/contact" text="Contact" closeMenu={() => setIsMenuOpen(false)} />
           </ul>
-        </div>
-      </div>
+    </div>
+    </div>
+   
     </nav>
   );
 };

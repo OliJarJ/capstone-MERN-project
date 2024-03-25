@@ -29,17 +29,25 @@ const ProductPage = () => {
 
   return (
     <div>
-      <h1>Products</h1>
-      <div>
-        {products.map(product => (
-          <div key={product._id}>
-            <h2>{product.title}</h2>
-            <p>{product.description}</p>
-            <p>Category: {product.category}</p>
-            <p>Price: {product.price}</p>
-            <p>Date Added: {new Date(product.date_added).toLocaleDateString()}</p>
+      <div className="container">
+      <h1 className="text-center mt-5 mb-4">Our Products</h1>
+      <div className="row">
+      {products.map(product => (
+          <div className="col-lg-4 col-md-6 mb-4" key={product._id}>
+            <div className="card h-100">
+                <img src={product.imageURL} alt="" className="card-img-top"/>
+              <div className="card-body">
+                <h5 className="card-title text-center fw-bold text-secondary">{product.title}</h5>
+                <p className="card-text text-center">{product.description}</p>
+                <p className="fw-bold">Category: {product.category}</p>
+                <p className="fw-bold">Price: ${product.price}</p>
+                <p className="fw-bold">Date Added: {new Date(product.date_added).toLocaleDateString()}</p>
+                <a href="#" className="btn btn-primary btn-block">View Details</a>
+              </div>
+            </div>
           </div>
         ))}
+      </div>
       </div>
     </div>
   );

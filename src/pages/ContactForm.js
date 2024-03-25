@@ -37,10 +37,10 @@ const ContactForm = () => {
      <div>
   <img className="img-fluid" src={couplewithdog} alt="A couple and their pet dog" />
 </div>
-      <form className="create" onSubmit={handleSubmit}>
+    <form className="create" onSubmit={handleSubmit}>
         <h3 className="text-center my-4 text-secondary display-6">Leave us a message!</h3>
 
-        <label>Name</label>
+        {/* <label>Name</label>
         <input
           type="text"
           value={name}
@@ -63,14 +63,32 @@ const ContactForm = () => {
           required
         ></textarea>
 
-        <button type="submit">Submit</button>
+        <button type="submit">Submit</button> */} 
+
+      {/* id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST"> */}
+    <div className="form-group">
+        <label htmlFor="name">Name</label>
+        <input type="text" className="form-control" />
+    </div>
+    <div className="form-group">
+        <label htmlFor="exampleInputEmail1">Email address</label>
+        <input type="email" className="form-control" aria-describedby="emailHelp" />
+    </div>
+    <div className="form-group">
+        <label htmlFor="message">Message</label>
+        <textarea className="form-control" rows="5"></textarea>
+    </div>
+    <button type="submit" className="btn btn-primary">Submit</button>
+</form>
         {error && <div className="error">{error}</div>}
 
         
-      </form>
+      {/* </form> */}
 
       {/* <div class="row"> */}
                         {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3090.611176869781!2d-84.37845712353605!3d39.228995627069644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8840536f0dec042f%3A0x54c665d266579f3e!2sKable%20Academy!5e0!3m2!1sen!2sus!4v1709822438219!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
+      <div class="row">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3090.611176869781!2d-84.37845712353605!3d39.228995627069644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8840536f0dec042f%3A0x54c665d266579f3e!2sKable%20Academy!5e0!3m2!1sen!2sus!4v1709822438219!5m2!1sen!2sus" style={{width: 600, height:450, border:0}}  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
 
                         {/* <div className="container py-4"><p className="fw-bold my-2 text-white">Kable Academy</p><p className="fw-bold my-2 text-white">
                             4901 Hunt Rd Ste 200
@@ -89,6 +107,7 @@ const ContactForm = () => {
         </ul>
       </div>
       </div>
+    </div>
     </div>
   );
 };
