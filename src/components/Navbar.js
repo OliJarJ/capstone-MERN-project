@@ -26,7 +26,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="container-fluid navbar navbar-expand-lg navbar-light" style={{ backgroundColor: '#360568ff' }}>
+    <nav id="fixednav" className="container-fluid navbar navbar-expand-lg navbar-light" style={{ backgroundColor: '#360568ff' }}>
       <div className="container">
         <Link to="/" className="navbar-brand">
           <FontAwesomeIcon icon={faOtter} className="text-white" style={{ fontSize: '2rem' }} />
@@ -39,7 +39,7 @@ const Navbar = () => {
           <ul className="navbar-nav ms-auto">
             <NavItem to="/" text="Home" closeMenu={() => setIsMenuOpen(false)} />
             <NavItem to="/aboutus" text="About Us" closeMenu={() => setIsMenuOpen(false)} />
-            <NavItem to="/shop" text="Animal Adoption" closeMenu={() => setIsMenuOpen(false)} />
+            <NavItem to="/pets" text="Animal Adoption" closeMenu={() => setIsMenuOpen(false)} />
             <NavItem to="/products" text="Shop" closeMenu={() => setIsMenuOpen(false)} />
             <NavItem to="/contact" text="Contact" closeMenu={() => setIsMenuOpen(false)} />
           </ul>

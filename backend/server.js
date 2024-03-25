@@ -24,7 +24,6 @@ app.use(express.json());
 app.use(cors());
 // app.use(bodyParser.json());
 // Connect to MongoDB using Mongoose
-mongoose.connect('mongodb+srv://Oljarj:CatinpantS@cluster0.c8oywcv.mongodb.net/');
 
 const db = mongoose.connection;
 
