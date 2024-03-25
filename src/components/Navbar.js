@@ -45,18 +45,7 @@ const Navbar = () => {
           </ul>
     </div>
     </div>
-    {/* <nav id="navbar" className="container-fluid" style={{ backgroundColor: '#360568ff', display: 'flex', position: 'sticky', top: 0, zIndex: 1000 }}> */}
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"><i className="bi bi-list"></i></span>
-
-                </button>
-      <div className="row">
-        <div className="brand d-flex" style={{ marginTop: '' }}>
-          <FontAwesomeIcon icon={faOtter} className="text-white my-2 mx-2" style={{ fontSize: 'xx-large' }} />
-          <h3 className="text-white d-flex mx-2 fw-bold" style={{ fontFamily: 'Goudy Old Style', marginTop: '1vh',  }}>O & A Pet Destination</h3>
-        </div>
-      </div>
+   
     </nav>
   );
 };

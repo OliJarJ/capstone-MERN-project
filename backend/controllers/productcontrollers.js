@@ -9,11 +9,11 @@ const getProducts = async (req, res) => {
 
 // create new product
 const createProducts = async (req, res) =>{
-    const {title, description, category, price, date_added} = req.body
+    const {title, description, category, imageURL, price, date_added} = req.body
 
     // add doc to db
     try{
-        const products = await Products.create({title, description, category, price, date_added})
+        const products = await Products.create({title, description, category, imageURL, price, date_added})
         res.status(200).json(products)
     } catch(error){
         res.status(400).json({error: error.message})
