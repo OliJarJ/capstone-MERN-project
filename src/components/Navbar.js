@@ -33,7 +33,7 @@ const Navbar = () => {
     <nav id="navbar" className="container-fluid" style={{ backgroundColor: '#360568ff', display: 'flex', position: 'sticky', top: 0, zIndex: 1000 }}>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+                    <span className="navbar-toggler-icon"><i className="bi bi-list"></i></span>
 
                 </button>
       <div className="row">
