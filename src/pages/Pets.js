@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import "bootstrap/dist/css/bootstrap.min.css";
+import golden from '../imgs/golden.jpg'
 
 const Pets = () => {
   const [shop, setProducts] = useState([]);
@@ -26,9 +27,11 @@ const Pets = () => {
   }, []); // Empty dependency array means this effect runs only once when the component mounts
 
   return (
-    <div className="container">
-      <h1 className="text-center mt-5 mb-4">Our Animals</h1>
-      <div className="row">
+    <div className="container-fluid">
+     
+<img src={golden} alt="Dog and human sitting side by side at sunset." className="img-fluid mb-4" style={{width:'100%'}}/>
+    <h2 className="display-4 text-center my-4 py-2 text-secondary">Meet Our Animals</h2>
+      <div className="row mx-4" id="animals" >
         {shop.map(shop => (
           <div className="col-lg-4 col-md-6 mb-4" key={shop._id}>
             <div className="card h-100">
@@ -45,6 +48,7 @@ const Pets = () => {
           </div>
         ))}
       </div>
+      
       <br />
     </div>
   );

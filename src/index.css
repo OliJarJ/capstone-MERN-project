@@ -211,7 +211,8 @@ font-size: small;
 #fixednav {
   position: fixed; /* Make it stick/fixed */
   width: 100%; /* Full width */
-  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  transition: top 0.3s;
+  z-index: 2; /* Transition effect when sliding down (and up) */
 }
 
 #guyanddog {
@@ -219,4 +220,8 @@ font-size: small;
 padding-right:0 !important;
   margin-left: 0 !important;
 margin-right:0 !important;
+}
+
+#animals {
+  z-index: -1;
 }
