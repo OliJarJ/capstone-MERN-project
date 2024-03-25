@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import "bootstrap/dist/css/bootstrap.min.css";
-import calicocat from '../imgs/calico-cat-img.jpg';
+import guyandhisdog from '../imgs/guyandhisdog.jpg';
 import dogocean from '../imgs/dog-and-ocean.jpg';
 import dogwithcouple from '../imgs/dog-with-couple.jpg';
 import kitten from '../imgs/cat-being-pet.jpg'
@@ -39,13 +39,15 @@ const Home = () => {
   // );
 
   return (
-    <div className='container-fluid'>
-      <div className="post">
-      <header>
-      <div>
-      <img className="img-fluid flex" src={calicocat} alt="A calico cat perched on a table." style={{}}/>
+   
+   <div className='container-fluid'>
+   <header className="container-fluid">
+    <div>
+      <img id="guyanddog" className="img-fluid" src={ guyandhisdog } alt="A dog being hugged by his owner." style={{width:'100%',}}/>
       </div>
       </header>
+      <div className="post">
+    
       <br />
      
         <div>
@@ -70,28 +72,28 @@ const Home = () => {
 <hr />
 <div className="container">
      <div className="row">
-    <div className="col-6 float-left">
+    <div className="col-lg-6 col-xl-6 col-md-6 float-left col-xs-12 col-sm-12">
       <h2 className="text-dark display-6 text-center my-4">Where Pet Passion Meets Professionalism</h2>
       <p className="text-center mx-4 my-4">At our pet shop, professionalism isn't just a standard—it's a way of life. We go above and beyond to exceed expectations, providing a welcoming and enriching environment where pets and their owners can thrive together. Come experience the difference firsthand and discover why we're more than just a pet shop—we're a community dedicated to the happiness and welfare of all animals.</p>
     </div>
-  <div className=" col-6">
-      <img src={dogocean} className="img-fluid border border-info" alt="Dog running along the ocean shoreline."/>
+  <div className=" col-lg-6 col-xl-6 col-md-6 col-xs-12 col-sm-12">
+      <img src={dogocean} className="img-fluid border border-info my-4" alt="Dog running along the ocean shoreline."/>
     </div>
-    <div className="col-6">
+    <div className="col-lg-6 col-xl-6 col-md-6 col-xs-12 col-sm-12">
       <img src={dogwithcouple} className="img-fluid border border-info" alt="An older couple and their pet dog."/>
     </div>
-    <div className="col-6">
+    <div className="col-lg-6 col-xl-6 col-md-6 col-xs-12">
       <h2 className="text-dark display-6 text-center my-4 my-4"> Your Paws-itively Perfect Pet Shop Experience </h2>
       <p className="text-center  mx-4 my-4">We're all about going the extra mile! Here, you'll find not only top-notch resources but also the kind of grade A customer service that makes you and your furry friend feel like family.</p>
     </div>
-    <div className="col-6">
+    <div className="col-lg-6 col-xl-6 col-md-6 col-xs-12 col-sm-12">
   <h2 className="text-dark display-6 text-center my-4">Ready for Your Next Best Friend?</h2>
-  <p className="text-center mx-4 my-4">Your journey to pet parenthood starts here! Whether you're looking for a playful kitten to brighten your days or a loyal companion to share your adventures, we have just the furry friend waiting to steal your heart. Don't wait any longer—swing by our adoption page now and start your unforgettable journey to finding your purrfect match!</p>
+  <p className="text-center mx-4 my-4 ">Your journey to pet parenthood starts here! Whether you're looking for a playful kitten to brighten your days or a loyal companion to share your adventures, we have just the furry friend waiting to steal your heart. Don't wait any longer—swing by our adoption page now and start your unforgettable journey to finding your purrfect match!</p>
   <div className="text-center">
-    <a href="/shop" className="btn btn-info btn-lg btn-3d">Explore Adoptions</a>
+    <a href="/pets" className="btn btn-info btn-lg btn-3d my-4">Explore Adoptions</a>
   </div>
 </div>
-    <div className="col-6">
+    <div className="col-md-6 col-lg-6 col-xl-6 col-xs-12 col-sm-12">
       <img src={kitten} className="img-fluid border border-info" alt="Kitten being pet."/>
     </div>
     </div>
