@@ -34,17 +34,18 @@ const Pets = () => {
             <div className="card h-100">
                 <img src={shop.imageURL} alt="" className="card-img-top"/>
               <div className="card-body">
-                <h5 className="card-title">{shop.title}</h5>
-                <p className="card-text">{shop.description}</p>
-                <p>Category: {shop.category}</p>
-                <p>Price: ${shop.price}</p>
-                <p>Date Added: {new Date(shop.date_added).toLocaleDateString()}</p>
+                <h5 className="card-title text-center fw-bold text-secondary">{shop.title}</h5>
+                <p className="card-text text-center">{shop.description}</p>
+                <p className="fw-bold">Category: {shop.category}</p>
+                <p className="fw-bold">Price: ${shop.price}</p>
+                <p className="fw-bold">Date Added: {new Date(shop.date_added).toLocaleDateString()}</p>
                 <a href="#" className="btn btn-primary btn-block">View Details</a>
               </div>
             </div>
           </div>
         ))}
       </div>
+      <br />
     </div>
   );
 };
