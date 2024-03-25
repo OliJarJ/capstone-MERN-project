@@ -2,14 +2,15 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const ShopPage = () => {
+const Pets = () => {
   const [shop, setProducts] = useState([]);
 
   useEffect(() => {
+    
     // Fetch products from backend when the component mounts
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/shop'); // Assuming your backend API endpoint is '/api/products'
+        const response = await axios.get('http://localhost:4000/pets'); 
         setProducts(response.data); // Assuming the backend returns an array of products
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -31,7 +32,7 @@ const ShopPage = () => {
         {shop.map(shop => (
           <div className="col-lg-4 col-md-6 mb-4" key={shop._id}>
             <div className="card h-100">
-              <img src="https://via.placeholder.com/300" className="card-img-top" alt="Animal" />
+                <img src={shop.imageURL} alt="" className="card-img-top"/>
               <div className="card-body">
                 <h5 className="card-title">{shop.title}</h5>
                 <p className="card-text">{shop.description}</p>
@@ -48,4 +49,4 @@ const ShopPage = () => {
   );
 };
 
-export default ShopPage;
+export default Pets;

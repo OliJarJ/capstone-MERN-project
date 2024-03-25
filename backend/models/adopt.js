@@ -12,6 +12,9 @@ const Adopt = new Schema({
         type: String,
         required: true
     },
+    imageURL: {
+        type: String
+    },
     category:{
         type: String,
         required: true

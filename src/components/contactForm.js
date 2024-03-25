@@ -21,6 +21,7 @@ const ContactForm = () => {
       body: JSON.stringify(Contact),
       headers: {
         'Content-Type': 'application/json'
+   
       }
     })
     const json = await response.json()
