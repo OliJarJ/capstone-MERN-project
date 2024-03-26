@@ -46,7 +46,7 @@ const ProductPage = () => {
                   <p className="fw-bold">Category: {product.category}</p>
                   <p className="fw-bold">Price: ${product.price}</p>
                   <p className="fw-bold">Date Added: {new Date(product.date_added).toLocaleDateString()}</p>
-                  <a href="#" className="btn btn-primary btn-block">View Details</a>
+                  <a href="#" className="btn btn-block portfolio-button" style={{backgroundColor:'#42A5F5', color:'white'}}>View Details</a>
                 </div>
               </div>
             </div>

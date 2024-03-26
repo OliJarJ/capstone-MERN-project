@@ -30,7 +30,7 @@ const Pets = () => {
     <div className="container-fluid">
      
 <img src={golden} alt="Dog and human sitting side by side at sunset." className="img-fluid mb-4" style={{width:'100%'}}/>
-    <h2 className="display-4 text-center my-4 py-2 text-secondary">Meet Our Animals</h2>
+    <h2 className="display-4 text-center my-4 py-2" style={{color:'#9FA8DA'}}>Meet Our Animals</h2>
       <div className="row mx-4" id="animals" >
         {shop.map(shop => (
           <div className="col-lg-4 col-md-6 mb-4" key={shop._id}>
@@ -42,7 +42,7 @@ const Pets = () => {
                 <p className="fw-bold">Category: {shop.category}</p>
                 <p className="fw-bold">Price: ${shop.price}</p>
                 <p className="fw-bold">Date Added: {new Date(shop.date_added).toLocaleDateString()}</p>
-                <a href="#" className="btn btn-primary btn-block portfolio-button">View Details</a>
+                <a href="#" className="btn btn-primary btn-block portfolio-button" style={{backgroundColor:'#42A5F5', color:'white'}}>View Details</a>
               </div>
             </div>
           </div>

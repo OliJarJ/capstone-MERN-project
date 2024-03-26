@@ -9,7 +9,7 @@ import '../index.css';
 import parrot from '../imgs/parrot-img.jpg'
 import corgi from '../imgs/corgi-img.jpg'
 import kitten from '../imgs/kitten-img.jpg'
-import betafish from '../imgs/betafish.jpg'
+import dogandcat from '../imgs/dogandcat.jpg'
 const AboutUs = () => {
   const [aboutContent, setAboutContent] = useState('');
 
@@ -26,7 +26,7 @@ const AboutUs = () => {
 
   return (
     <div className="container-fluid">
-      <img className="img-fluid" src={betafish} alt="Fish in an aquarium tank." />
+      <img className="img-fluid" src={dogandcat} alt="Dog and cat lying together." />
       <h5 className="display-6 text-center text-secondary my-4">About Us</h5>
           <div className="row">
          
@@ -49,7 +49,7 @@ What sets O & A Pet Destination apart is our unwavering commitment to providing 
 At O & A Pet Destination, we believe in giving back to the community that has supported us throughout the years. That's why we actively participate in local initiatives and charity events aimed at improving the welfare of animals in need. From sponsoring adoption drives to organizing educational workshops, we are dedicated to making a positive impact on the lives of both pets and people. When you choose to shop with us, you're not just supporting a business - you're joining a compassionate community that values the wellbeing of all creatures great and small. Welcome to O & A Pet Destination, where every pet is treated like family.</p>
 </div>
 </div>
-          <Link to="/contact" className="btn btn-primary mx-4">Contact Us</Link>
+          <Link to="/contact" className="btn mx-4 portfolio-button" style={{backgroundColor:'#42A5F5', color:'white'}}>Contact Us</Link>
        
     </div>
   );

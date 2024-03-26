@@ -69,7 +69,7 @@ const ContactForm = () => {
         className={emptyFields.includes('message') ? 'error' : ''}
       />
 
-      <button>Submit</button>
+      <button className="btn portfolio-button" style={{backgroundColor:'#42A5F5', color:'white'}}>Submit</button>
       {error && <div className="error">{error}</div>}
     </form>
   )
