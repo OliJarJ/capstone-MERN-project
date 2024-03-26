@@ -42,7 +42,7 @@ const Pets = () => {
                 <p className="fw-bold">Category: {shop.category}</p>
                 <p className="fw-bold">Price: ${shop.price}</p>
                 <p className="fw-bold">Date Added: {new Date(shop.date_added).toLocaleDateString()}</p>
-                <a href="#" className="btn btn-primary btn-block">View Details</a>
+                <a href="#" className="btn btn-primary btn-block portfolio-button">View Details</a>
               </div>
             </div>
           </div>
