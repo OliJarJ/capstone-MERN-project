@@ -4,12 +4,21 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import "bootstrap/dist/css/bootstrap.min.css";
+import "react-bootstrap";
 import guyandhisdog from '../imgs/guyandhisdog.jpg';
 import girlandpuppy from '../imgs/girl-holding-puppy.jpg';
 import dogwithcouple from '../imgs/dog-with-couple.jpg';
 import kitten from '../imgs/cat-being-pet.jpg'
 import catonyellow from '../imgs/catonyellow.jpg'
 import blackdog from '../imgs/blackdog.jpg'
+import brownwhitegp from '../imgs/brownwhitegp.jpg'
+import catlickingfinger from '../imgs/catlickingfinger.jpg'
+import catanddogoutside from '../imgs/catanddogoutside.jpg'
+import chonkycats from '../imgs/chonkycats.jpg'
+import beardeddragonlizard from '../imgs/beardeddragonlizard.jpg'
+import childrenwdog from '../imgs/childrenwdog.jpg'
+import smileydog from '../imgs/smileydog.jpg'
+import smallbudgie from '../imgs/smallbudgie.jpg'
 
 const Home = () => {
   // const [posts, setPosts] = useState([]);
@@ -58,6 +67,7 @@ const Home = () => {
         <br />
         <br />
         <div>
+        {/*Mission Statement*/}
         <h5 className="display-6 text-center fw-bold" style={{color:'#7986CB', marginBottom:'2rem'}}>Our Mission</h5>
           <p className="mx-5" style={{ marginBottom:'2rem'}}>At O & A Pet Destination, our mission is to create a haven where pet lovers can discover unparalleled joy in nurturing and caring for their beloved companions. With a steadfast commitment to excellence and compassion, we strive to be more than just a destination for pet supplies – we aspire to be a trusted partner on your journey of pet parenthood.</p>
 
@@ -70,21 +80,43 @@ const Home = () => {
 <p className="my-2 mx-5 py-2" >Our curated selection of products reflects our dedication to providing only the highest quality essentials and indulgences for pets of all shapes and sizes. From premium nutrition and grooming supplies to stylish accessories and enriching toys, every item in our inventory is carefully chosen to enhance the well-being and happiness of your furry, feathered, or scaly friend.</p>
 
 <p className="my-2 py-2 mx-5" style={{marginBottom:'5vh',}}>At O & A Pet Destination, we invite you to embark on a journey of discovery, companionship, and unconditional love. Together, let us celebrate the joy of pet ownership and nurture lasting relationships that enrich both our lives and the lives of our cherished animal companions.</p>
-
+{/*End Mission Statement*/}
 
 {/*Carousel Item*/}
 
-<div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
+<div id="carouselExampleFade" className="carousel slide carousel-fade mx-5" data-bs-ride="carousel">
   <div className="carousel-inner">
     <div className="carousel-item active">
       <img src={catonyellow} className="d-block w-100" alt="Cat on a yellow background."/>
     </div>
-    <div className="carousel-item">
+    <div className="carousel-item active">
       <img src={blackdog} className="d-block w-100" alt="Black dog with toy in mouth."/>
     </div>
-    <div className="carousel-item">
-      <img src="..." className="d-block w-100" alt="..."/>
+    <div className="carousel-item active">
+      <img src={brownwhitegp} className="d-block w-100" alt="Black and brown guinea pig."/>
     </div>
+    <div className="carousel-item active">
+      <img src={catlickingfinger} className="d-block w-100" alt="Cat licking hand."/>
+    </div>
+    <div className="carousel-item active">
+      <img src={catanddogoutside} className="d-block w-100" alt="Cat and dog lying together in the grass."/>
+    </div>
+    <div className="carousel-item active">
+      <img src={chonkycats} className="d-block w-100" alt="Two cats"/>
+    </div>
+    <div className="carousel-item active">
+      <img src={beardeddragonlizard} className="d-block w-100" alt="Black dog with toy in mouth."/>
+    </div>
+    <div className="carousel-item active">
+      <img src={childrenwdog} className="d-block w-100" alt="Black dog with toy in mouth."/>
+    </div>
+    <div className="carousel-item active">
+      <img src={smallbudgie} className="d-block w-100" alt="Black dog with toy in mouth."/>
+    </div>
+    <div className="carousel-item active">
+      <img src={smileydog} className="d-block w-100" alt="Black dog with toy in mouth."/>
+    </div>
+   
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -97,7 +129,7 @@ const Home = () => {
 </div>
 {/*End Carousel Item*/}
 
-
+{/*Picture and Image Tiles*/}
 <div className="container">
      <div className="row">
     <div className="col-lg-6 col-xl-6 col-md-6 float-left col-xs-12 col-sm-12">
@@ -132,7 +164,9 @@ const Home = () => {
     </div>
   </div>
         </div>
+        {/*Picture and Image Tiles*/}
       </div>
+      
     
   );
 };
