@@ -37,7 +37,7 @@ const ContactForm = () => {
      <div>
   <img className="img-fluid" src={couplewithdog} alt="A couple and their pet dog" />
 </div>
-    <form className="create" onSubmit={handleSubmit}>
+    <form className="create mx-5 " onSubmit={handleSubmit}>
         <h3 className="text-center my-4 text-secondary display-6">Leave us a message!</h3>
 
         {/* <label>Name</label>
@@ -66,28 +66,26 @@ const ContactForm = () => {
         <button type="submit">Submit</button> */} 
 
       {/* id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST"> */}
-    <div className="form-group">
+    <div className="form-group col-6">
         <label htmlFor="name">Name</label>
         <input type="text" className="form-control" />
     </div>
-    <div className="form-group">
+    <div className="form-group col-6">
         <label htmlFor="exampleInputEmail1">Email address</label>
         <input type="email" className="form-control" aria-describedby="emailHelp" />
     </div>
-    <div className="form-group">
+    <div className="form-group col-6">
         <label htmlFor="message">Message</label>
         <textarea className="form-control" rows="5"></textarea>
     </div>
-    <button type="submit" className="btn btn-primary">Submit</button>
+    <div className="text-center">
+    <button type="submit" className="btn btn-primary my-4 portfolio-button">Submit</button>
+    </div>
 </form>
         {error && <div className="error">{error}</div>}
 
-        
-      {/* </form> */}
 
-      {/* <div class="row"> */}
-                        {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3090.611176869781!2d-84.37845712353605!3d39.228995627069644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8840536f0dec042f%3A0x54c665d266579f3e!2sKable%20Academy!5e0!3m2!1sen!2sus!4v1709822438219!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
-      <div class="row">
+      <div class="row mx-5 justify-content-center">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3090.611176869781!2d-84.37845712353605!3d39.228995627069644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8840536f0dec042f%3A0x54c665d266579f3e!2sKable%20Academy!5e0!3m2!1sen!2sus!4v1709822438219!5m2!1sen!2sus" style={{width: 600, height:450, border:0}}  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
 
                         {/* <div className="container py-4"><p className="fw-bold my-2 text-white">Kable Academy</p><p className="fw-bold my-2 text-white">
@@ -98,11 +96,11 @@ const ContactForm = () => {
                         </div> */}
       <div className="container">
       <div className=" my-5 mx-2 py-5 py-5 justify-content-center">
-        <h3 className="mx-2">Follow us on Social Media:</h3>
+        <h3 className="mx-2 fw-bold text-center text-secondary">Follow us on Social Media:</h3>
         <ul style={{listStyle:'none'}}>
-          <li className="social-media-card mx-2"><a href="https://example.com/facebook" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-          <li className="social-media-card mx-2"><a href="https://example.com/twitter" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-          <li className="social-media-card mx-2"><a href="https://example.com/instagram" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li className="social-media-card mx-2 text-center fw-bold"><a href="https://example.com/facebook" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li className="social-media-card mx-2  text-center fw-bold"><a href="https://example.com/twitter" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+          <li className="social-media-card mx-2  text-center fw-bold"><a href="https://example.com/instagram" target="_blank" rel="noopener noreferrer">Instagram</a></li>
           {/* Add more social media links as needed */}
         </ul>
       </div>

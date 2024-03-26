@@ -26,7 +26,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav id="fixednav" className="container-fluid navbar navbar-expand-lg navbar-light" style={{ backgroundColor: '#360568ff' }}>
+    <nav id="fixednav" className="container-fluid navbar navbar-expand-lg navbar-light" style={{ backgroundColor: '#360568ff'}}>
       <div className="container">
         <Link to="/" className="navbar-brand">
           <FontAwesomeIcon icon={faOtter} className="text-white" style={{ fontSize: '2rem' }} />
