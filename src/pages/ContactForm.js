@@ -34,7 +34,7 @@ const ContactForm = () => {
 <div className='row'>
 <div className='col-lg-6 col-xl-6 col-md-6 col-xs-12 col-sm-12 col-6'>
     <form className="create mx-5 " onSubmit={handleSubmit}>
-        <h3 className="text-center my-4 text-secondary display-6">Leave us a message!</h3>
+        <h3 className="text-center my-4 display-6" style={{color:'#7986CB'}}>Leave us a message!</h3>
     <div className="form-group">
         <label htmlFor="name">Name</label>
         <input type="text" className="form-control"  onChange={(e) => setName(e.target.value)}/>
@@ -59,13 +59,17 @@ const ContactForm = () => {
         </div>
         </div>
     
-                    
+        <br></br>
+        <hr />
+        <br />            
       <div className="container">
-      <div className=" my-5 mx-2 py-5 py-5">
-        <h3 className="mx-2 fw-bold text-center text-secondary">Follow us on Social Media:</h3>
-        <ul className="py-4" style={{listStyle:'none'}}>
+      <h3 className="mx-2 fw-bold text-center py-2" style={{color:'#7986CB'}}>Follow us on Social Media:</h3>
+      <div className="row mx-2 py-2">
+        <ul className="py-4" style={{listStyle:'none', textDecoration:'none', flexDirection: 'row', display:'inline-flex', justifyContent:'center'}}>
           <li className="social-media-card mx-2 text-center fw-bold my-2"><a href="https://example.com/facebook" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+
           <li className="social-media-card mx-2  text-center fw-bold my-2"><a href="https://example.com/twitter" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+
           <li className="social-media-card mx-2  text-center fw-bold my-2"><a href="https://example.com/instagram" target="_blank" rel="noopener noreferrer">Instagram</a></li>
           {/* Add more social media links as needed */}
         </ul>

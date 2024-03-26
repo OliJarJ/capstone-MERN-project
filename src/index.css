@@ -81,7 +81,7 @@ font-size: small;
 .social-media-card {
   background-color: #fff; /* Card background color */
   border-radius: 8px; /* Card border radius */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Card shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Card shadow */
   padding: 20px; /* Padding inside the card */
   transition: transform 0.3s ease; /* Transition for hover effect */
   
@@ -102,11 +102,11 @@ font-size: small;
 
 .social-media-card ul li a {
   text-decoration: none; /* Remove underline from links */
-  color: #333; /* Link color */
+  color: #320067; /* Link color */
 }
 
 .social-media-card ul li a:hover {
-  color: #007bff; /* Link color on hover */
+  color: #a303ff; /* Link color on hover */
 }
 
 

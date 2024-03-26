@@ -34,7 +34,7 @@ const ProductPage = () => {
       <img src={bostonterrier} alt="Boston Terrier looking out a car window." className="img-fluid mb-4" />
 
       <div className="container">
-        <h1 className="text-center  mb-4">Our Products</h1>
+        <h1 className="text-center  mb-4" style={{color:'#7986CB'}}>Our Products</h1>
         <div className="row">
           {products.map(product => (
             <div className="col-lg-4 col-md-6 mb-4" key={product._id}>

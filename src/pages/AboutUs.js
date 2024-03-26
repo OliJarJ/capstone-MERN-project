@@ -27,7 +27,7 @@ const AboutUs = () => {
   return (
     <div className="container-fluid">
       <img className="img-fluid" src={dogandcat} alt="Dog and cat lying together." />
-      <h5 className="display-6 text-center text-secondary my-4">About Us</h5>
+      <h5 className="display-6 text-center my-4" style={{color:'#7986CB'}}>About Us</h5>
           <div className="row">
          
           <img className="img-fluid  col-6 my-4" src={parrot} alt="A colorful parrot" />
