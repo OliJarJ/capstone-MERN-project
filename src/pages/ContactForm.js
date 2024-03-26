@@ -30,17 +30,20 @@ const ContactForm = () => {
      <div>
   <img className="img-fluid" src={couplewithdog} alt="A couple and their pet dog" />
 </div>
+<div className='container'>
+<div className='row'>
+<div className='col-lg-6 col-xl-6 col-md-6 col-xs-12 col-sm-12 col-6'>
     <form className="create mx-5 " onSubmit={handleSubmit}>
         <h3 className="text-center my-4 text-secondary display-6">Leave us a message!</h3>
-    <div className="form-group col-6">
+    <div className="form-group">
         <label htmlFor="name">Name</label>
         <input type="text" className="form-control"  onChange={(e) => setName(e.target.value)}/>
     </div>
-    <div className="form-group col-6">
+    <div className="form-group">
         <label htmlFor="exampleInputEmail1">Email address</label>
         <input type="email" className="form-control" aria-describedby="emailHelp"   onChange={(e) => setEmail(e.target.value)}/>
     </div>
-    <div className="form-group col-6">
+    <div className="form-group">
         <label htmlFor="message">Message</label>
         <textarea className="form-control" rows="5"   onChange={(e) => setMessage(e.target.value)}></textarea>
     </div>
@@ -48,9 +51,15 @@ const ContactForm = () => {
     <button type="submit" className="btn btn-primary my-4 portfolio-button">Submit</button>
     </div>
 </form>
-        {error && <div className="error">{error}</div>}
-      <div className="row mx-5 justify-content-center">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3090.611176869781!2d-84.37845712353605!3d39.228995627069644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8840536f0dec042f%3A0x54c665d266579f3e!2sKable%20Academy!5e0!3m2!1sen!2sus!4v1709822438219!5m2!1sen!2sus" style={{width: 600, height:450, border:0}}  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+</div>
+        {error && <div className="error">{error}</div>} 
+        <div className='col-lg-6 col-xl-6 col-md-6 col-xs-12 col-sm-12 col-6'>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3090.611176869781!2d-84.37845712353605!3d39.228995627069644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8840536f0dec042f%3A0x54c665d266579f3e!2sKable%20Academy!5e0!3m2!1sen!2sus!4v1709822438219!5m2!1sen!2sus" style={{width: 600, height:450, border:0}}  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        </div>   
+        </div>
+        </div>
+      {/* <div className="row mx-5 justify-content-center"> */}
+                    
       <div className="container">
       <div className=" my-5 mx-2 py-5 py-5 justify-content-center">
         <h3 className="mx-2 fw-bold text-center text-secondary">Follow us on Social Media:</h3>
@@ -62,16 +71,8 @@ const ContactForm = () => {
         </ul>
       </div>
       </div>
-    </div>
+    {/* </div> */}
     </div>
   );
 };
 export default ContactForm;
-
-
-
-
-
-
-
-
