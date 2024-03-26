@@ -58,21 +58,21 @@ const ContactForm = () => {
         </div>   
         </div>
         </div>
-      {/* <div className="row mx-5 justify-content-center"> */}
+    
                     
       <div className="container">
-      <div className=" my-5 mx-2 py-5 py-5 justify-content-center">
+      <div className=" my-5 mx-2 py-5 py-5">
         <h3 className="mx-2 fw-bold text-center text-secondary">Follow us on Social Media:</h3>
-        <ul style={{listStyle:'none'}}>
-          <li className="social-media-card mx-2 text-center fw-bold"><a href="https://example.com/facebook" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-          <li className="social-media-card mx-2  text-center fw-bold"><a href="https://example.com/twitter" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-          <li className="social-media-card mx-2  text-center fw-bold"><a href="https://example.com/instagram" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <ul className="py-4" style={{listStyle:'none'}}>
+          <li className="social-media-card mx-2 text-center fw-bold my-2"><a href="https://example.com/facebook" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li className="social-media-card mx-2  text-center fw-bold my-2"><a href="https://example.com/twitter" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+          <li className="social-media-card mx-2  text-center fw-bold my-2"><a href="https://example.com/instagram" target="_blank" rel="noopener noreferrer">Instagram</a></li>
           {/* Add more social media links as needed */}
         </ul>
       </div>
       </div>
-    {/* </div> */}
     </div>
+    
   );
 };
 export default ContactForm;
