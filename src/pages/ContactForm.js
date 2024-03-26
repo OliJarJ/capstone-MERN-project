@@ -1,22 +1,17 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import couplewithdog from '../imgs/couple-with-dog.jpg'
-
 const ContactForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [error, setError] = useState(null);
-
-  const handleSubmit = async (e) => {   
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
     const contactData = { name, email, message };
-
     try {
       const response = await axios.post('http://localhost:4000/contact', contactData);
       console.log(response.data);
-
       setName('');
       setEmail('');
       setMessage('');
@@ -30,70 +25,32 @@ const ContactForm = () => {
       }
     }
   };
-
   return (
-   
     <div>
      <div>
   <img className="img-fluid" src={couplewithdog} alt="A couple and their pet dog" />
 </div>
     <form className="create mx-5 " onSubmit={handleSubmit}>
         <h3 className="text-center my-4 text-secondary display-6">Leave us a message!</h3>
-
-        {/* <label>Name</label>
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-
-        <label>Email:</label>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-
-        <label>Message:</label>
-        <textarea
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          required
-        ></textarea>
-
-        <button type="submit">Submit</button> */} 
-
-      {/* id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST"> */}
     <div className="form-group col-6">
         <label htmlFor="name">Name</label>
-        <input type="text" className="form-control" />
+        <input type="text" className="form-control"  onChange={(e) => setName(e.target.value)}/>
     </div>
     <div className="form-group col-6">
         <label htmlFor="exampleInputEmail1">Email address</label>
-        <input type="email" className="form-control" aria-describedby="emailHelp" />
+        <input type="email" className="form-control" aria-describedby="emailHelp"   onChange={(e) => setEmail(e.target.value)}/>
     </div>
     <div className="form-group col-6">
         <label htmlFor="message">Message</label>
-        <textarea className="form-control" rows="5"></textarea>
+        <textarea className="form-control" rows="5"   onChange={(e) => setMessage(e.target.value)}></textarea>
     </div>
     <div className="text-center">
     <button type="submit" className="btn btn-primary my-4 portfolio-button">Submit</button>
     </div>
 </form>
         {error && <div className="error">{error}</div>}
-
-
-      <div class="row mx-5 justify-content-center">
+      <div className="row mx-5 justify-content-center">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3090.611176869781!2d-84.37845712353605!3d39.228995627069644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8840536f0dec042f%3A0x54c665d266579f3e!2sKable%20Academy!5e0!3m2!1sen!2sus!4v1709822438219!5m2!1sen!2sus" style={{width: 600, height:450, border:0}}  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-
-                        {/* <div className="container py-4"><p className="fw-bold my-2 text-white">Kable Academy</p><p className="fw-bold my-2 text-white">
-                            4901 Hunt Rd Ste 200
-                        </p>
-                        <p className="fw-bold my-2 text-white">Blue Ash, OH 45242</p>
-                        </div>
-                        </div> */}
       <div className="container">
       <div className=" my-5 mx-2 py-5 py-5 justify-content-center">
         <h3 className="mx-2 fw-bold text-center text-secondary">Follow us on Social Media:</h3>
@@ -109,5 +66,12 @@ const ContactForm = () => {
     </div>
   );
 };
-
 export default ContactForm;
+
+
+
+
+
+
+
+
