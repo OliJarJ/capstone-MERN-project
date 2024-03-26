@@ -27,7 +27,7 @@ const Pets = () => {
 
   return (
     <div className="container">
-      <h1 className="text-center mt-5 mb-4">Our Animals</h1>
+      <h1 className="text-center mb-4">Our Animals</h1>
       <div className="row">
         {shop.map(shop => (
           <div className="col-lg-4 col-md-6 mb-4" key={shop._id}>

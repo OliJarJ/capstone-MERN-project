@@ -30,7 +30,7 @@ const ProductPage = () => {
   return (
     <div>
       <div className="container">
-      <h1 className="text-center mt-5 mb-4">Our Products</h1>
+      <h1 className="text-center mb-4">Our Products</h1>
       <div className="row">
       {products.map(product => (
           <div className="col-lg-4 col-md-6 mb-4" key={product._id}>
